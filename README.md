@@ -6,7 +6,7 @@
 
 The Fitness Training Platform is a Java-based application that helps users manage their fitness routines, track progress, and stay motivated with personalized training plans. This platform provides an interface to create, manage, and monitor fitness goals, track daily activities, and view progress insights. Using MySQL as the database, it securely stores user data and fitness records.
 
----
+
 
 **Key Features**
 1. User Management: Create and manage user profiles with personalized fitness goals.
