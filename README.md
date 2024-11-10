@@ -68,3 +68,4 @@ Mobile Support: Add a mobile interface using a framework like Flutter or React N
 API Integration: Integrate with APIs for real-time nutrition data or exercise databases.<br>
 Notifications: Add reminders for workouts and meals.<br>
 Analytics: Improve data analytics to give users more insights into their performance trends.<br>
+                                                                                                                                                    source code will be uploaded sooj
