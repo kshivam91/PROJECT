@@ -50,17 +50,17 @@ Configuration:
 
 src/com/fitness: Main Java classes for handling the application logic.
 
-User: Handles user profile and settings.
-Workout: Manages workout routines and progress tracking.
-Nutrition: Manages meal plans and nutritional tracking.
-sql: SQL scripts for setting up the database tables and sample data.
-config: Configuration files, such as db.properties, for managing database credentials.
+User: Handles user profile and settings.<br>
+Workout: Manages workout routines and progress tracking.<br>
+Nutrition: Manages meal plans and nutritional tracking.<br>
+sql: SQL scripts for setting up the database tables and sample data.<br>
+config: Configuration files, such as db.properties, for managing database credentials.<br>
 
 ---
 
 # Future Improvements
 
-Mobile Support: Add a mobile interface using a framework like Flutter or React Native.
-API Integration: Integrate with APIs for real-time nutrition data or exercise databases.
-Notifications: Add reminders for workouts and meals.
-Analytics: Improve data analytics to give users more insights into their performance trends.
+Mobile Support: Add a mobile interface using a framework like Flutter or React Native.<br>
+API Integration: Integrate with APIs for real-time nutrition data or exercise databases.<br>
+Notifications: Add reminders for workouts and meals.<br>
+Analytics: Improve data analytics to give users more insights into their performance trends.<br>
