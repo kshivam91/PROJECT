@@ -24,12 +24,16 @@ Setup and Installation
 
 --- 
 
-# Prerequisites:
+# Technologies Used
 
-Java Development Kit (JDK 8 or above)
-MySQL Server (8.0 or above)
-A MySQL client, like MySQL Workbench, to manage your database
-Clone the Repository:
+
+Frontend : HTML, CSS, JavaScript
+
+Backend : Java
+
+Database : Mysql
+
+Email Notifications : Nodemailer or similar library
 
 ---
 
