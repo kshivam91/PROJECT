@@ -1,0 +1,88 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class UserRegistrationForm extends JFrame {
+
+    private JTextField nameField;
+    private JTextField emailField;
+    private JPasswordField passwordField;
+    private JButton submitButton;
+
+    public UserRegistrationForm() {
+        setTitle("User Registration - Fitness Program");
+        setSize(400, 500);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setLayout(new BorderLayout());
+
+        // Create a panel to hold components and background
+        JPanel panel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                
+                // Create a gradient from green (health) to white (clean)
+                Color startColor = new Color(34, 193, 195);  // Fitness Green
+                Color endColor = new Color(253, 187, 45);    // Energy Orange
+                Graphics2D g2d = (Graphics2D) g;
+                GradientPaint gradient = new GradientPaint(0, 0, startColor, 0, getHeight(), endColor);
+                g2d.setPaint(gradient);
+                g2d.fillRect(0, 0, getWidth(), getHeight());
+                
+                // Add fitness-related image (e.g., dumbbell, fitness icon)
+                ImageIcon fitnessImage = new ImageIcon(getClass().getResource("/resources/fitness-background.jpg"));
+                Image img = fitnessImage.getImage();
+                g.drawImage(img, 0, 0, getWidth(), 200, this); // Image at the top part of the form
+            }
+        };
+
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS)); // Arrange components vertically
+
+        // Add components (name, email, password fields)
+        nameField = new JTextField(20);
+        emailField = new JTextField(20);
+        passwordField = new JPasswordField(20);
+        submitButton = new JButton("Submit");
+
+        // Add components to panel
+        panel.add(new JLabel("Name:"));
+        panel.add(nameField);
+        panel.add(new JLabel("Email:"));
+        panel.add(emailField);
+        panel.add(new JLabel("Password:"));
+        panel.add(passwordField);
+        panel.add(submitButton);
+
+        // Add the panel to the frame
+        add(panel, BorderLayout.CENTER);
+
+        // Add action listener to the submit button
+        submitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String name = nameField.getText();
+                String email = emailField.getText();
+                String password = new String(passwordField.getPassword());
+
+                // Validate the email and other fields
+                if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "All fields are required!");
+                } else {
+                    // Simulate user registration logic here
+                    JOptionPane.showMessageDialog(null, "Registration Successful!");
+                }
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new UserRegistrationForm().setVisible(true);
+            }
+        });
+    }
+}
